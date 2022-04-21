@@ -1,0 +1,11 @@
+.product-container {
+  max-width: 1200px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px 5px;
+  background-color: #eee;
+}
+/*# sourceMappingURL=Product.css.map */

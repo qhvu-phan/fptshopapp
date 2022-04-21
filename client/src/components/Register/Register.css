@@ -1,0 +1,33 @@
+.login_container {
+  max-width: 1200px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.login_info {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  margin: 150px auto;
+}
+
+.login_title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.login_user {
+  margin-bottom: 20px;
+}
+
+.login_password {
+  margin-bottom: 20px;
+}
+
+.login_image {
+  padding: 40px 0;
+}
+/*# sourceMappingURL=Register.css.map */

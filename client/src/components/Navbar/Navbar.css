@@ -1,0 +1,26 @@
+.nav {
+  color: #fff;
+  height: 80px;
+}
+
+.nav-content {
+  width: 1200px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-content-textfield {
+  background-color: #fff;
+  color: #333333;
+  width: 500px;
+}
+
+.nav-content-icon {
+  margin: 0 20px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Navbar.css.map */
