@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -22,8 +23,12 @@ const Navbar = () => {
         />
         <Typography>
           <CircleNotificationsIcon className="nav-content-icon" />
-          <ShoppingCartIcon className="nav-content-icon" />
-          <AccountCircleIcon className="nav-content-icon" />
+          <Link to="/cart">
+            <ShoppingCartIcon className="nav-content-icon" />
+          </Link>
+          <Link to="/login">
+            <AccountCircleIcon className="nav-content-icon" />
+          </Link>
         </Typography>
       </Toolbar>
     </AppBar>

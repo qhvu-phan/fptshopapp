@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./ProductItem.css";
 const ProductItem = (props) => {
   const product = props.productProps;
@@ -13,8 +15,12 @@ const ProductItem = (props) => {
     name: "#474c51",
     price: "#cb1c22",
   });
+  const notify = () => {
+    toast("Vui lòng đăng nhập");
+  };
   return (
     <div className="product-item">
+      <ToastContainer />
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
@@ -51,7 +57,7 @@ const ProductItem = (props) => {
               Xem Thêm
             </Button>
           </Link>
-          <Button size="small" color="primary">
+          <Button onClick={notify} size="small" color="primary">
             Mua Ngay
           </Button>
         </CardActions>

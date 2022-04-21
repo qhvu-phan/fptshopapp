@@ -1,0 +1,22 @@
+.cart-container {
+  max-width: 1200px;
+  margin: 90px auto;
+}
+
+.cart-title {
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+.cart-info {
+  font-size: 18px;
+  margin: 10px 40px;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 18px;
+  margin: 20px 0;
+  padding-right: 40px;
+}
+/*# sourceMappingURL=Cart.css.map */
