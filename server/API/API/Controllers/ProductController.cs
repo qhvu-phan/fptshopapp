@@ -15,11 +15,14 @@ namespace API.Controllers
     public class ProductController : Controller
     {
         private readonly IProductServices _productServices;
+
         public ProductController(IProductServices proServices)
         {
             _productServices = proServices;
         }
 
+        // get or search products
+        [Route("GetProducts")]
         [HttpGet]
         public async Task<IActionResult> GetProducts(string search)
         {
@@ -30,7 +33,7 @@ namespace API.Controllers
                 products = await _productServices.SearchProducts(search) ;
             }
 
-            return  Ok( products.Select(product => product.Product_Dto()));
+            return Ok( products.OrderByDescending(pro => pro.pro_createDate).Select(product => product.Product_Dto()));
         }
 
         [HttpGet("{Id}", Name = "GetProduct")]
@@ -39,7 +42,7 @@ namespace API.Controllers
             try
             {
                 var product = await _productServices.GetProductAsync(Id);
-
+                
                 if (product is null)
                 {
                     return NotFound();
@@ -120,6 +123,24 @@ namespace API.Controllers
                 return NotFound();
             }
         }
+
+        // get products by id of trademark and page number 
+        [Route("GetProducts/Trademark/{Id}/Page/{page}")]
+        [HttpGet]
+        public async Task<IActionResult> GetProductsByIdOfTrademark(string Id,int page)
+        {
+            try
+            {
+                var Result = await _productServices.GetProductsById_Trademark(Id);
+                return Ok(Result.OrderByDescending(pro => pro.pro_createDate).Skip((page-1)*4).Take(4));
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
+
+
 
     }
 }

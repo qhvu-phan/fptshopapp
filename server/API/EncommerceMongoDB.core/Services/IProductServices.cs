@@ -20,5 +20,7 @@ namespace EncommerceMongoDB.core.Services
         Task DeleteProductAsync(Product product);
 
         Task<List<Product>> SearchProducts(string proName);
+
+        Task<List<Product>> GetProductsById_Trademark(string id);
     }
 }
