@@ -12,6 +12,8 @@ namespace EncommerceMongoDB.core
            public string Trademark_Collection { get; set; }
            public string Connection_String { get; set; }
            public string Product_Collection { get; set; }
-        
+
+           public  string Address_Collection { get; set; }
+
     }
 }

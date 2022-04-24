@@ -30,6 +30,7 @@ namespace API
         {
             services.AddScoped<IDbClient, DbClient>();
             services.AddScoped<IProductServices, ProductServices>();
+            services.AddScoped<IAddressServices, AddressServices>();
             services.Configure<EcommercestoreDbConfig>(Configuration);
             services.AddScoped<ITrademarkServices, TrademarkServices>();
             services.AddControllers();

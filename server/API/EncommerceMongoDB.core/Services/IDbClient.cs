@@ -13,5 +13,8 @@ namespace EncommerceMongoDB.core
         IMongoCollection<Trademark> GetTrademarksCollection();
 
         IMongoCollection<Product> GetProductsCollection();
+
+        IMongoCollection<Address> GetAddressCollection();
+
     }
 }

@@ -133,6 +133,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\CreateAddressDto.cs" />
     <Compile Include="Dtos\CreateProductDto.cs" />
     <Compile Include="Dtos\CreateTrademarkDto.cs" />
     <Compile Include="Dtos\ProductDto.cs" />
@@ -140,9 +141,12 @@
     <Compile Include="Dtos\UpdateProductDto.cs" />
     <Compile Include="Dtos\UpdateTrademarkDto.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Services\AddressServices.cs" />
     <Compile Include="Services\DbClient.cs" />
     <Compile Include="Models\EcommercestoreDbConfig.cs" />
+    <Compile Include="Services\IAddressServices.cs" />
     <Compile Include="Services\IDbClient.cs" />
     <Compile Include="Services\IProductServices.cs" />
     <Compile Include="Services\ITrademarkServices.cs" />

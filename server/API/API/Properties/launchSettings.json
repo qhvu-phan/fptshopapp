@@ -17,7 +17,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DATABASE_NAME": "EcommerceDb",
         "Trademark_Collection": "Trademarks",
-        "Product_Collection": "Products"
+        "Product_Collection": "Products",
+        "Address_Collection": "Address"
       }
     },
     "API": {
@@ -30,7 +31,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DATABASE_NAME": "EcommerceDb",
         "Trademark_Collection": "Trademarks",
-        "product_collection": "Products"
+        "product_collection": "Products",
+        "Address_Collection": "Address"
       }
     }
   }
