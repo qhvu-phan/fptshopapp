@@ -138,6 +138,7 @@
     <Compile Include="Dtos\CreateTrademarkDto.cs" />
     <Compile Include="Dtos\ProductDto.cs" />
     <Compile Include="Dtos\TrademarkDto.cs" />
+    <Compile Include="Dtos\UpdateAddressDto.cs" />
     <Compile Include="Dtos\UpdateProductDto.cs" />
     <Compile Include="Dtos\UpdateTrademarkDto.cs" />
     <Compile Include="Extensions.cs" />

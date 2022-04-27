@@ -13,8 +13,8 @@ namespace EncommerceMongoDB.core.Services
 
         Task AddNewAddressAsync(Address ad);
 
-        Task UpdateAddress(Address ad);
+        Task UpdateAddressAsync(Address ad);
 
-        Task DeleteAddress(Address ad);
+        Task DeleteAddressAsync(Address ad);
     }
 }

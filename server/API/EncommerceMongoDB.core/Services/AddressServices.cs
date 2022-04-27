@@ -19,13 +19,13 @@ namespace EncommerceMongoDB.core.Services
         public async Task AddNewAddressAsync(Address ad) => await _address.InsertOneAsync(ad);
 
 
-        public async Task DeleteAddress(Address ad) => await _address.DeleteOneAsync(address => address.Id == ad.Id);
+        public async Task DeleteAddressAsync(Address ad) => await _address.DeleteOneAsync(address => address.Id == ad.Id);
 
 
         public async Task<Address> GetAddressByIdAsync(string Id) => await _address.Find(ad => ad.Id == Id).FirstOrDefaultAsync();
 
 
-        public async Task UpdateAddress(Address ad) => await _address.ReplaceOneAsync(address => address.Id == ad.Id, ad);
+        public async Task UpdateAddressAsync(Address ad) => await _address.ReplaceOneAsync(address => address.Id == ad.Id, ad);
 
     }
 }

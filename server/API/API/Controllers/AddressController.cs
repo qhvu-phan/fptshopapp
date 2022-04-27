@@ -21,7 +21,7 @@ namespace API.Controllers
         }
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> GetAddressById(string Id)
+        public async Task<IActionResult> GetAddressByIdAsync(string Id)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddAddress(CreateAddressDto address_dto)
+        public async Task<IActionResult> AddAddressAsync(CreateAddressDto address_dto)
         {
             var address = new Address
             {
@@ -47,6 +47,39 @@ namespace API.Controllers
             return NoContent();
         }
 
-       
+        [HttpPut("{Id}")]
+        public async Task<IActionResult> UpdateAddressAsync(string Id,UpdateAddressDto addressDto)
+       { 
+            try
+            {
+                var address = await _addressServices.GetAddressByIdAsync(Id);
+
+                address.details = addressDto.addressDetails;
+                address.update_date = DateTime.Now;
+
+                await _addressServices.UpdateAddressAsync(address);
+                return NoContent();
+            }
+            catch
+            {
+                return NotFound();
+            }
+       }
+
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> DeleteAddressAsync(string Id)
+        {
+            try
+            {
+                var address = await _addressServices.GetAddressByIdAsync(Id);
+
+                await _addressServices.DeleteAddressAsync(address);
+                return NoContent();
+            }
+            catch
+            {
+                return NotFound();
+            }
+        }
     }
 }

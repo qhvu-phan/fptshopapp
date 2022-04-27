@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\server",
+    "\\server\\API",
+    "\\server\\API\\API",
+    "\\server\\API\\EncommerceMongoDB.core",
+    "\\server\\API\\EncommerceMongoDB.core\\Services"
+  ],
+  "SelectedNode": "\\server\\API\\EncommerceMongoDB.core\\Services\\AddressServices.cs",
+  "PreviewInSolutionExplorer": false
+}
