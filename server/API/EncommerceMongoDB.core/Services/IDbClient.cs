@@ -16,5 +16,7 @@ namespace EncommerceMongoDB.core
 
         IMongoCollection<Address> GetAddressCollection();
 
+        IMongoCollection<Order> GetOrderCollection();
+
     }
 }

@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dtos\CreateAddressDto.cs" />
+    <Compile Include="Dtos\OrderDto.cs" />
     <Compile Include="Dtos\CreateProductDto.cs" />
     <Compile Include="Dtos\CreateTrademarkDto.cs" />
     <Compile Include="Dtos\ProductDto.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Dtos\UpdateTrademarkDto.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Services\AddressServices.cs" />
     <Compile Include="Services\DbClient.cs" />
@@ -153,6 +155,7 @@
     <Compile Include="Services\ITrademarkServices.cs" />
     <Compile Include="Models\Trademark.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\OrderService.cs" />
     <Compile Include="Services\ProductServices.cs" />
     <Compile Include="Services\TrademarkServices.cs" />
   </ItemGroup>

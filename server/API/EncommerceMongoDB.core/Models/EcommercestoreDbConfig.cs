@@ -14,6 +14,7 @@ namespace EncommerceMongoDB.core
            public string Product_Collection { get; set; }
 
            public  string Address_Collection { get; set; }
+           public  string Order_Collection { get; set; }
 
     }
 }

@@ -18,7 +18,8 @@
         "DATABASE_NAME": "EcommerceDb",
         "Trademark_Collection": "Trademarks",
         "Product_Collection": "Products",
-        "Address_Collection": "Address"
+        "Address_Collection": "Address",
+        "Order_Collection": "Order"
       }
     },
     "API": {
@@ -32,7 +33,8 @@
         "DATABASE_NAME": "EcommerceDb",
         "Trademark_Collection": "Trademarks",
         "product_collection": "Products",
-        "Address_Collection": "Address"
+        "Address_Collection": "Address",
+        "Order_Collection" : "Order"
       }
     }
   }

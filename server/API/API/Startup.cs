@@ -33,6 +33,7 @@ namespace API
             services.AddScoped<IAddressServices, AddressServices>();
             services.Configure<EcommercestoreDbConfig>(Configuration);
             services.AddScoped<ITrademarkServices, TrademarkServices>();
+            services.AddScoped<IOrderService, OrderService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

@@ -13,6 +13,8 @@ namespace EncommerceMongoDB.core
 
         private readonly IMongoCollection<Address> _address;
 
+        private readonly IMongoCollection<Order> _order;
+
         public DbClient(IOptions<EcommercestoreDbConfig> ecommercestoreDbConfig)
         {
             var client = new MongoClient(ecommercestoreDbConfig.Value.Connection_String);
@@ -20,6 +22,7 @@ namespace EncommerceMongoDB.core
             _trademark = database.GetCollection<Trademark>(ecommercestoreDbConfig.Value.Trademark_Collection);
             _product = database.GetCollection<Product>(ecommercestoreDbConfig.Value.Product_Collection);
             _address = database.GetCollection<Address>(ecommercestoreDbConfig.Value.Address_Collection);
+            _order = database.GetCollection<Order>(ecommercestoreDbConfig.Value.Order_Collection);
         }
 
         public IMongoCollection<Address> GetAddressCollection() => _address;
@@ -28,6 +31,8 @@ namespace EncommerceMongoDB.core
 
 
         public IMongoCollection<Trademark> GetTrademarksCollection() => _trademark;
+
+        public IMongoCollection<Order> GetOrderCollection() => _order;
 
     }
 }
